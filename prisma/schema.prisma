@@ -45,7 +45,7 @@ model UsageLog {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  @@map("usagelog")
+  @@map("usages")
 }
 
 model User {
