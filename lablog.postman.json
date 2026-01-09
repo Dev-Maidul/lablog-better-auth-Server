@@ -1,0 +1,470 @@
+{
+    "info": {
+        "name": "Programming Hero",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "LabLog",
+            "description": "",
+            "item": [
+                {
+                    "name": "user",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "me",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/user/me",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "me"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "register",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"xyz\",\n    \"email\": \"xyz@gmail.com\",\n    \"password\": \"123456\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/user/register",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "register"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "login",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"xyz@gmail.com\",\n    \"password\": \"123456\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/user/login",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "user",
+                                        "login"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                },
+                {
+                    "name": "equipment",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "create equipment",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"Digital Microscope\",\n  \"serialNumber\": \"DSO-2025-002\",\n  \"location\": \"Physics Lab - Room 304\",\n  \"metadata\": {\n    \"brand\": \"Tektronix\",\n    \"model\": \"TBS1102B\",\n    \"voltageRange\": \"0–300V\",\n    \"condition\": \"Good\",\n    \"lastCalibration\": \"2025-01-10\"\n  }\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/equipment/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "equipment"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "get equipments",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/equipment/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "equipment"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                },
+                {
+                    "name": "usage-log",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "create Usage Log",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4NDM4NjY3LTJiNzktNGFjNi04OTYzLTkzNDg5YWE5ZjM5MCIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzY3MTEzODA2LCJleHAiOjE3Njc3MTg2MDZ9.8QruG0oqWflti4_fn2AG91ZQ9h8hn2_HU42zHk3uLHo",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"equipmentId\": \"4ac153fa-ba50-437a-8939-a2bedef1a364\",\n  \"startTime\": \"2025-12-30T10:30:00.000Z\",\n  \"purpose\": \"Microcontroller signal analysis\",\n  \"notes\": \"Used for CSE-312 lab experiment\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/usageLog/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "usageLog"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "get Usage Logs",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {},
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                        "description": "",
+                                        "type": "string"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/usageLog/",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "usageLog"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "update Usage Logs",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0ODI2ODI1LTYzODUtNDEyZi1hYzhjLWYzOTUwMzhhYWYxNyIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzY3MDk4NDMwLCJleHAiOjE3Njc3MDMyMzB9.Dof_d61q29XjFesUtw8BdX1psHlTPcBheSI1UAqhFzE",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "PATCH",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/usageLog/fb3ea27c-9d59-4fd5-8db1-3e046dc73148",
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "usageLog",
+                                        "fb3ea27c-9d59-4fd5-8db1-3e046dc73148"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        }
+    ],
+    "variable": [],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "exec": [
+                    ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "exec": [
+                    ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+            }
+        }
+    ],
+    "auth": {}
+}
